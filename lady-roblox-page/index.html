@@ -16,6 +16,15 @@
 <body>
     <div class="background-overlay"></div>
 
+    <!-- Click to Start Overlay -->
+    <div id="start-overlay"
+        style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 9999; display: flex; justify-content: center; align-items: center; cursor: pointer;">
+        <div style="text-align: center; color: white;">
+            <h1 style="font-size: 3rem; margin-bottom: 1rem;">Haz clic para entrar 💖</h1>
+            <p style="font-size: 1.5rem;">(y activar la música)</p>
+        </div>
+    </div>
+
     <main class="container">
         <!-- Hero Section -->
         <section class="hero">
@@ -36,7 +45,7 @@
                 <p>
                     Quería hacer algo bonito, algo que te recuerde lo genial que eres.
                     Aunque nos estamos conociendo, me encanta pasar tiempo contigo.
-                    Espero que este pequeño rincón futurista te guste tanto como a mí me gusta hablar contigo.
+                    Espero que este pequeño rincón te guste tanto como a mí me gusta hablar contigo.
                 </p>
                 <div class="roblox-icon">
                     <i class="fa-solid fa-gamepad"></i>
@@ -67,7 +76,7 @@
         <!-- Chess Game Section -->
         <section class="chess-section" id="chess-section">
             <div class="glass-card game-card">
-                <h2>Ajedrez vs Robot 🤖</h2>
+                <h2>Ajedrez vs TociBOT 🤖</h2>
                 <p>Demuestra tu estrategia.</p>
 
                 <div class="game-controls">
@@ -87,7 +96,7 @@
             </div>
         </section>
 
-        <!-- Domino Game Section -->
+        <!-- Domino Game Section 
         <section class="domino-section" id="domino-section">
             <div class="glass-card game-card">
                 <h2>Dominó vs Robot 🎲</h2>
@@ -107,7 +116,7 @@
             </div>
         </section>
 
-        <!-- Tower Game Section -->
+        <!-- Tower Game Section 
         <section class="tower-section" id="tower-section">
             <div class="glass-card game-card">
                 <h2>Torre Neón 🏗️</h2>
@@ -122,11 +131,11 @@
                 <canvas id="tower-canvas" width="300" height="400"></canvas>
             </div>
         </section>
-
+        -->
     </main>
 
-    <audio id="bg-music" loop>
-        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    <audio id="bg-music" loop autoplay>
+        <source src="Coldplay - Sparks.mp3" type="audio/mpeg">
         Tu navegador no soporta el elemento de audio.
     </audio>
 

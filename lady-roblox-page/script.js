@@ -31,6 +31,41 @@ document.addEventListener('DOMContentLoaded', () => {
         progressBar.style.width = `${percent}%`;
     });
 
+    // Attempt Autoplay
+    const playPromise = audio.play();
+    if (playPromise !== undefined) {
+        playPromise.then(_ => {
+            isPlaying = true;
+            updatePlayIcon();
+        }).catch(error => {
+            console.log("Autoplay prevented. Waiting for interaction.");
+            isPlaying = false;
+        });
+    }
+
+    // Handle Overlay Click
+    const overlay = document.getElementById('start-overlay');
+    overlay.addEventListener('click', () => {
+        audio.play().then(() => {
+            isPlaying = true;
+            updatePlayIcon();
+            overlay.style.opacity = '0';
+            setTimeout(() => overlay.style.display = 'none', 500);
+        });
+    });
+
+    function updatePlayIcon() {
+        if (isPlaying) {
+            playIcon.classList.remove('fa-play');
+            playIcon.classList.add('fa-pause');
+            playIcon.style.paddingLeft = '0';
+        } else {
+            playIcon.classList.remove('fa-pause');
+            playIcon.classList.add('fa-play');
+            playIcon.style.paddingLeft = '4px';
+        }
+    }
+
     // Add some floating particles for extra effect
     createParticles();
 
